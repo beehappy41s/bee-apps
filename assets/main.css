@@ -1,0 +1,44 @@
+/* Main CSS for the game */ 
+
+#beegame {
+  width: 500px; /* Adjust as needed */
+  margin: 40px auto;
+  padding: 20px;
+  background: #afd42b65; /* Light green background */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+
+#maze {
+  display: grid;
+  grid-template-columns: repeat(10, 32px); /* 10 columns, adjust size as needed */
+  justify-content: center;
+}
+
+.tile {
+  width: 33px;
+  height: 33px;
+  box-sizing: border-box;
+}
+
+.wall {
+  background: #b0d42b94;
+  background-image: url('images/bush.png'); /* Add your bush image to assets/images/ */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.path {
+  background: transparent;
+  background-image: url('images/grass.png'); /* Add your grass image to assets/images/ */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wall { background-color: transparent; }
+.path { background-color: transparent; }
+.bee { background: url('images/bee.png') center/cover; }
+.bee:hover { transform: scale(1.1); }
+.flower { background: url('images/flower.png') center/cover; }
+.bee:hover .flower { transform: scale(1.1); }
